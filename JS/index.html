@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1 {
+            margin-bottom: 2.4rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Start Inline event -->
+     <h1>Inline Event </h1>
+     <button onclick="alert('Welcome')"> greeting</button>
+     <button ondblclick="alert('Welcome to JS Course')"> greeting again</button>
+     <button onmouseover="alert('Welcome')"> greeting</button>
+
+     <!--End Inline event-->
+
+     <!--Start DOM Event Handler-->
+     <h1>DOM Event handler</h1>
+     <button id ="myBtn">greeting</button>
+     <button id ="myBtn1"> greeting again</button>
+     <!--End DOM Event Handler-->
+
+     <!--Start DOM Event Handler-->
+     <h1>addEventListener Event handler</h1>
+     <button id ="myBtn2">greeting</button>
+     <button id ="myBtn1"> greeting again</button>
+     <!--End DOM Event Handler-->
+    <script>
+        //...........................................
+        //# No camel case in onclick and various events
+        //.......................................
+
+        // document.getElementById('myBtn').onclick="alert('Welcome')" // Cant write directly we have to form the call back function
+        //METHOD 1
+        // document.getElementById('myBtn').onclick=()=>{
+        //     alert('Welcome')
+        // }
+
+        //METHOD 2 (traditional Method)
+        document.getElementById('myBtn').onclick= function () {
+            alert('Welcome')
+        }
+
+        document.getElementById('myBtn2').addEventListener("click" , function () {
+            alert('To the world best')
+        });
+
+
+
+    </script>
+</body>
+</html>
