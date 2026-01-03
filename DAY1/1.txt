@@ -1,0 +1,32 @@
+DAY 1 — JS Core + Thinking in Code
+Topics
+
+let, const
+
+Data types
+
+Type coercion
+
+== vs ===
+
+Truthy / falsy
+
+Hands-On
+
+Predict output of 15 JS snippets
+
+Write:
+
+even/odd checker
+
+max of 3 numbers
+
+grade calculator
+
+Mini Build 🛠️
+
+Basic Calculator (Console + UI optional)
+
+Placement Focus
+
+Interviewers check logic clarity, not syntax speed.
