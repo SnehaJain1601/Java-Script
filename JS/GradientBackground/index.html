@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(
+        to right,
+        rgb(92, 145, 229),
+        rgb(152, 63, 198)
+    );
+}
+
+section {
+    text-align: center;
+}
+
+/* ✅ ONLY button container */
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+button {
+    border: none;
+    padding: 0.8rem 1.6rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#myButton {
+    background-color: #0a2540;
+    color: #fff;
+}
+
+#myButton2 {
+    background-color: #9cff00;
+    color: #fff;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* ✅ Copy code box FIXED */
+.copyCode {
+    display: block;              /* VERY IMPORTANT */
+    margin-top: 1rem;
+    padding: 1rem 1.5rem;
+    max-width: 420px;
+    margin-inline: auto;
+
+    color: #101010;
+    font-size: 0.85rem;
+    background: rgba(255, 255, 255, 0.18);
+    border-left: 4px solid #fff;
+    border-radius: 0.4rem;
+}
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="btns">
+            <button id="myButton"> </button>
+            <button id="myButton2"> </button>
+        </div>
+        <h2>Copy your code here</h2>
+        <div class="copyCode">
+            background-image : linear-gradient(to right , rgb(92,145,229) , rgb(152,63,198));
+        </div>
+
+    </section>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
