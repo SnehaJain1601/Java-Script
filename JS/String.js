@@ -33,3 +33,51 @@
 // let result = text.match("JavaScript");
 //todo here the js converts the normal text into regular expression text.match(/JavaScript/); without the g flag
 // let result = text.match(/Javascript/gi);
+//.............................................................
+
+//? matchAll() : Returns an iterator of all matches, providing detailed information about each match. Returns an empty iterator if no match is found.
+// let text = "Hello JavaScript, welcome to our world best JavaScript course";
+// let matchResult = text.matchAll("javascript");
+// let matchResult = text.matchAll("JavaScript");
+//todo  here the js converts the normal text into regular expression text.match(/JavaScript/g); also adds the g flag at the end
+// console.log(...matchResult);
+// for (let item of matchResult) {
+//   console.log(item[0]);
+// }
+
+// for (let index of matchResult) {
+//   console.log(index.index);
+// }
+
+// for (let { index } of matchResult) {
+//   console.log(index);
+// }
+//.............................................................
+//? includes(): Returns true if the string contains the specified value, and false otherwise.
+// let text = "Hello JavaScript, welcome to our world best JavaScript course";
+// let includeResult = text.includes(/java/i);
+// let includeResult = text.includes("J");
+// console.log(includeResult);
+
+// Note: includes() is case sensitive. includes() is an ES6 feature.
+//.............................................................
+
+//? startsWith(): The startsWith() method returns true if a string begins with a specified value.Otherwise it returns false:
+// let text = "Hello JavaScript, welcome to our world best JavaScript course";
+// let result = text.startsWith("Helcome");
+// let result = text.startsWith("Hello");
+// console.log(result);
+
+//* start position for the search can be specified
+// let result = text.startsWith("welcome", 18);
+// let result = text.startsWith("welcome", 17);
+// console.log(result);
+//.............................................................
+
+//? endsWith(): The endsWith() method returns true if a string ends with a specified value. Otherwise it returns false:
+
+// let text = "Hello JavaScript, welcome to our world best JavaScript course";
+// let result = text.endsWith("welcome");
+// let result = text.endsWith("course");
+// console.log(result);
+
