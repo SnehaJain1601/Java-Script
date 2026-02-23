@@ -80,6 +80,13 @@ button {
 const getTodoListFromLocal = ()=> {
           return JSON.parse(localStorage.getItem("youtubeTodoList"))
         }
+// ...........................................................
+const addTodoListLocalStorage = (localTodoLists) => {
+  return localStorage.setItem(
+    "youtubeTodoList" , 
+    JSON.stringify(localTodoLists)
+  );
+};
             localTodoLists = getTodoListFromLocal() || [];
 
 // ..........................................
@@ -104,7 +111,7 @@ const addToDolist=(e) =>{
             //To empty the input space after clicking the addtodo button
             inputValue.value = ""; 
             //To add only that empty to the display which is not present
-            if(!localTodoLists.includes(todoListValue)){
+            if( todoListValue != "" && !localTodoLists.includes(todoListValue)){
             localTodoLists.push(todoListValue);
             localTodoLists = [...new Set(localTodoLists)];
             
@@ -117,11 +124,35 @@ const addToDolist=(e) =>{
             addTodoDynamicElement(todoListValue);
             }
          }
+//.........................................
 
          showTodoList();
+//Remove the data 
+         const removeTodoElem = (e) =>{
+          const todoToRemove = e.target;
+          let todoListContent = todoToRemove.previousElementSibling.innerText;
+          let parentElem = todoToRemove.parentElement;
+            console.log(todoListContent);
+            //To remove the entry on the spot from screen to without refreshing the pagr
+            localTodoLists = localTodoLists.filter((curTodo) => {
+              return curTodo != todoListContent.toLowerCase();
+
+            });
+            addTodoListLocalStorage(localTodoLists);
+
+            parentElem.remove();
+
+         }
+         mainTodoElem.addEventListener("click" , (e)=>{
+          e.preventDefault();
+          removeTodoElem(e);
+         })
+
+
          document.querySelector(".btn").addEventListener('click' ,(e)=>{
             addToDolist(e);
          })
+         
     </script>
     
 </body>
