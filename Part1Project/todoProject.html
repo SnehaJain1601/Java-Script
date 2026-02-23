@@ -76,21 +76,49 @@ button {
     <script>
          const mainTodoElem = document.querySelector(".todo-lists-elem");
          const inputValue = document.getElementById("inputValue");
-        let localTodoLists = [];
-         const addToDolist=(e) =>{
-            e.preventDefault();
-  
-            const todoListValue = inputValue.value.trim();
-            localTodoLists.push(todoListValue);
-            localTodoLists = new Set(localTodoLists)
-              console.log(localTodoLists);
+// .................................
+const getTodoListFromLocal = ()=> {
+          return JSON.parse(localStorage.getItem("youtubeTodoList"))
+        }
+            localTodoLists = getTodoListFromLocal() || [];
 
-            localTodoLists
+// ..........................................
+const addTodoDynamicElement = (currElem) =>{
             const divElem = document.createElement("div");
             divElem.classList.add("main_todo_div");
-            divElem.innerHTML = ` <li> ${inputValue.value}</li>    <button class= "deleteBtn"> Delete </button>`;
+            divElem.innerHTML = ` <li> ${currElem}</li>    <button class= "deleteBtn"> Delete </button>`;
             mainTodoElem.append(divElem);
+
+}
+const showTodoList = () =>{
+  localTodoLists.forEach((curElem )=> {
+    addTodoDynamicElement(curElem);
+    
+  });
+
+}
+// .......................................................
+const addToDolist=(e) =>{
+            e.preventDefault();
+            const todoListValue = inputValue.value.trim();
+            //To empty the input space after clicking the addtodo button
+            inputValue.value = ""; 
+            //To add only that empty to the display which is not present
+            if(!localTodoLists.includes(todoListValue)){
+            localTodoLists.push(todoListValue);
+            localTodoLists = [...new Set(localTodoLists)];
+            
+            console.log(localTodoLists);
+            localStorage.setItem("youtubeTodoList",JSON.stringify(localTodoLists));
+
+
+            //To form div element and add the input value entered by user and the delete button and to append in the 
+            // main section for display
+            addTodoDynamicElement(todoListValue);
+            }
          }
+
+         showTodoList();
          document.querySelector(".btn").addEventListener('click' ,(e)=>{
             addToDolist(e);
          })
