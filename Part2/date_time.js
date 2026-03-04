@@ -68,3 +68,22 @@
 // const dateFromMilliseconds = new Date(curMilliSeconds);
 // console.log(dateFromMilliseconds);
 
+// ..............................................................................
+//todo Note:
+//? 1: JavaScript counts months from 0 to 11:
+// ?January = 0, December = 11
+
+//? 2: JavaScript Stores Dates as Milliseconds: JavaScript stores dates as number of milliseconds since January 01, 1970.
+
+//* Date String Format: If the dateString is in a recognizable format, the Date object will be created accordingly.
+//? new Date(date string) creates a date object from a date string
+//.............................................................
+// const date1 = new Date("2024-01-05"); // Year-Month-Day
+// const date2 = new Date("January 5, 2024"); // Month Day, Year
+// console.log(date1);
+// console.log(date2);
+// OUTPUT
+// Fri Jan 05 2024 05:30:00 GMT+0530 (India Standard Time)
+// Fri Jan 05 2024 00:00:00 GMT+0530 (India Standard Time)
+// ......................................................................................
+
