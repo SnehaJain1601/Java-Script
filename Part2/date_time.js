@@ -107,6 +107,22 @@ const currentDate = new Date();
 // const day = currentDate.getDay();
 // console.log(day); //3 Sunday as 0 index
 
+//* ==================================================
+//* JavaScript Set Date Methods / Setting Components:
+//* ===================================================
 // ......................................................................................
+const date = new Date();
+// console.log(date);
 
+//? setFullYear(yearValue[, monthValue[, dayValue]]): Sets the full year for a specified date according to local time.
+// date.setFullYear(2025);
+// console.log(date); // Date object with the year set to 2025
+
+//? setMonth(monthValue[, dayValue]): Sets the month for a specified date according to local time.
+// date.setMonth(5); // June (months are zero-based)
+// console.log(date); // Date object with the month set to June
+
+//? setDate(dayValue): Sets the day of the month for a specified date according to local time.
+// date.setDate(15);
+// console.log(date); // Date object with the day of the month set to 15
 // ......................................................................................
