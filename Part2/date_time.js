@@ -85,5 +85,28 @@
 // OUTPUT
 // Fri Jan 05 2024 05:30:00 GMT+0530 (India Standard Time)
 // Fri Jan 05 2024 00:00:00 GMT+0530 (India Standard Time)
+
+//* ==================================================
+//* JavaScript Get Date Methods / Getting Components:
+//* ===================================================
+// ......................................................................................
+// You can get various components of a date using the methods of the Date object:
+const currentDate = new Date();
+// //? In a date object, the time is static.
+// const year = currentDate.getFullYear();
+// console.log(currentDate);
+// OUTPUT
+// 2026-03-04T15:57:46.713Z
+
+// const month = currentDate.getMonth(); // 0-based index
+// console.log(month); //2
+
+// const date = currentDate.getDate();
+// console.log(date); //4
+
+// const day = currentDate.getDay();
+// console.log(day); //3 Sunday as 0 index
+
 // ......................................................................................
 
+// ......................................................................................
