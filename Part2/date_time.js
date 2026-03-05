@@ -111,7 +111,7 @@ const currentDate = new Date();
 //* JavaScript Set Date Methods / Setting Components:
 //* ===================================================
 // ......................................................................................
-const date = new Date();
+// const date = new Date();
 // console.log(date);
 
 //? setFullYear(yearValue[, monthValue[, dayValue]]): Sets the full year for a specified date according to local time.
@@ -173,4 +173,62 @@ const date = new Date();
 // const date = new Date();
 // date.setTime(1832090690883);
 // console.log(date); // Date object representing the specified time
+
+
+
+//* ================================================================
+//* A few useful methods of the Date object in JavaScript
+//* ================================================================
+
+//? 1: toLocaleString(): Returns a string representing the date and time portion of a Date object using the current locale's conventions.
+// const date = new Date();
+// const localString = date.toLocaleString();
+// console.log(localString); // Example output: "2/19/2024, 4:30:00 PM" (depending on the locale)
+
+//? 2: toLocaleDateString(): Returns a string representing the date portion of a Date object using the current locale's conventions.
+// const date = new Date();
+// const localDateString = date.toLocaleDateString();
+// console.log(localDateString); // Example output: "2/19/2024" (depending on the locale)
+
+//? 3: toLocaleTimeString(): Returns a string representing the time portion of a Date object using the current locale's conventions.
+// const date = new Date();
+// const localTimeString = date.toLocaleTimeString();
+// console.log(localTimeString); // Example output: "4:30:00 PM" (depending on the locale)
+
+//? 5: parse(): Parses a string representation of a date and returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.
+// const dateString = "2026-02-05T16:30:00Z";
+// const parsedDate = Date.parse(dateString);
+// console.log(parsedDate); // Example output: 1770309000000 (milliseconds)
+
+//* ==================
+//* //* Bonus
+//* =================
+
+let newDate = new Date();
+console.log(Date.now());
+console.log(newDate.getTime());
+
+//? Date.now() is a static method of the Date object.
+//? Use Date.now() if you want the timestamp right this second.
+//? It returns the current timestamp (number of milliseconds) representing the current moment.
+//? Use new Date().getTime() if you have an existing Date object from elsewhere and want its timestamp.
+
+//! ==================
+//! Interview Questions
+//! =================
+
+//! 1: Write a function to add a specified number of days to a given date.
+
+// // Example usage:
+// const date = new Date("2024-02-29");
+// const newDate = addDaysToDate(date, 7);
+// console.log(newDate);
+// console.log(newDate.toLocaleDateString());
+
+//! Question: Write a function to calculate the difference in days between two given dates.
+
+// // Example usage:
+// const date1 = new Date("2024-02-19");
+// const date2 = new Date("2024-03-01");
+// console.log(getDaysDifference(date1, date2)); // Output: 11 (difference in days)
 
