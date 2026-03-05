@@ -145,3 +145,32 @@ const date = new Date();
 // const time = currentTime.getTime();
 // console.log(time);
 
+//* ==================================================
+//* JavaScript Set Time Methods / Getting Components:
+//* ===================================================
+
+// const date = new Date();
+
+//? setHours(hourValue[, minuteValue[, secondValue[, millisecondValue]]]): Sets the hours for a specified date according to local time.
+// date.setHours(10);
+// console.log(date); // Date object with the hours set to 10
+
+//? setMinutes(minuteValue[, secondValue[, millisecondValue]]): Sets the minutes for a specified date according to local time.
+// date.setMinutes(30);
+// console.log(date); // Date object with the minutes set to 30
+
+//? setSeconds(secondValue[, millisecondValue]): Sets the seconds for a specified date according to local time.
+// date.setSeconds(45);
+// console.log(date); // Date object with the seconds set to 45
+
+//? setMilliseconds(millisecondValue): Sets the milliseconds for a specified date according to local time.
+// const date = new Date();
+
+// date.setMilliseconds(500);
+// console.log(date); // Date object with the milliseconds set to 500
+
+//? setTime(timeValue): Sets the Date object to the time represented by a number of milliseconds since January 1, 1970, 00:00:00 UTC.
+// const date = new Date();
+// date.setTime(1832090690883);
+// console.log(date); // Date object representing the specified time
+
