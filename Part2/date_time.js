@@ -126,3 +126,22 @@ const date = new Date();
 // date.setDate(15);
 // console.log(date); // Date object with the day of the month set to 15
 // ......................................................................................
+
+
+//* ==================================================
+//* JavaScript Get Time Methods / Getting Components:
+//* ===================================================
+// const currentTime = new Date();
+// console.log(currentTime);
+// const hours = currentTime.getHours();
+// console.log(hours);
+
+// const minutes = currentTime.getMinutes();
+// console.log(minutes);
+
+// const seconds = currentTime.getSeconds();
+// console.log(seconds);
+
+// const time = currentTime.getTime();
+// console.log(time);
+
