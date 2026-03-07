@@ -98,3 +98,54 @@ let person = {
 //   },
 // };
 
+//* =====================================
+//*  passing objects by reference and by value
+//* ======================================
+//.................................................
+//? sol: In JavaScript, primitive data types like numbers and strings are passed by value, while objects are passed by reference.
+// 1. Pass by value
+// let a = 10;
+// const modifyValue = (x) => (x = 20);
+
+// console.log(modifyValue(a)); 
+// console.log(a);
+//.................................................
+
+//? 2.Passing by reference: When passing by reference, a reference to the memory location of the object is passed to the function or assigned to a variable. Any changes made to the object through this reference will affect the original object.
+
+// let obj = { id: 5, name: "kodyfier" };
+
+// let obj1 = obj;
+
+// obj1.name = "thapa technical";
+// console.log(obj1);
+// console.log("original", obj);
+//...............................................................
+// 3.Object.assign()
+// To avoid this behavior and create a true copy of the object, you can use methods like Object.assign() or the spread operator (...):
+
+//? Object.assign() is used to copy properties from one or more source objects to a target object.
+
+// let obj = { id: 5, name: "kodyfier" };
+// let obj1 = {};
+// let newObj = Object.assign(obj1, obj);
+
+// newObj.name = "thapa technical";
+// console.log(newObj);
+// console.log("original", obj);
+
+//* =====================================
+//* 4.Comparison by Reference:
+//* ======================================
+
+//? Two objects are equal only if they refer to the same object.
+//? Independent objects (even if they look alike) are not equal:
+
+// const obj1 = { name: "vinod" };
+// const obj2 = { name: "vinod" };
+// const obj3 = obj1;
+
+// // const isEqual = obj1 == obj2 ? true : false;
+// const isEqual = obj1 == obj3 ? true : false;
+// console.log(isEqual);
+
